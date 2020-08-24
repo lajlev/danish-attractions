@@ -20,3 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/visits/create/{id}', 'VisitsController@create')->name('visits.create');
+Route::get('/visits/delete/{id}', 'VisitsController@delete')->name('visits.delete');

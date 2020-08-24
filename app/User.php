@@ -39,6 +39,6 @@ class User extends Authenticatable
 
     public function attractions()
     {
-        return $this->belongsToMany(Attraction::class);
+        return $this->belongsToMany(Attraction::class)->withTimestamps();
     }
 }

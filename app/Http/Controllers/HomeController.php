@@ -23,9 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $attractionsVisited = auth()->user()->attractions;
+        $attractionsNotVisited = Attraction::whereNotIn('id', $attractionsVisited->pluck('id'))->get();
+
         return view('home', [
-            'attractions' => Attraction::all(),
-            'visits' => Attraction::all()
+            'attractionsNotVisited' => $attractionsNotVisited,
+            'attractionsVisited' => $attractionsVisited    
         ]);
     }
 }
