@@ -12,7 +12,7 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('home');
-    // Routes for laravel admin
+    // Routes for laravel
     $router->resource('users', UserController::class);
     $router->resource('attractions', AttractionController::class);
 
