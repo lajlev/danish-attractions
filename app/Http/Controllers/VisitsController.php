@@ -9,7 +9,7 @@ class VisitsController extends Controller
     public function create($attraction)
     {
         auth()->user()->attractions()->attach($attraction);
-        return Redirect::to('/')->with('status', '🎊 Visit registered');
+        return Redirect::to('/')->with('status', '🎊 Visit logged');
     }
     public function delete($attraction)
     {
