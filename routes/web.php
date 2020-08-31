@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
-Route::resource('attractions', 'AttractionController');
+Route::resource('attractions', 'AttractionController')->middleware('admin');
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/visits/create/{id}', 'VisitsController@create')->name('visits.create');
