@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Attraction;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -23,7 +24,8 @@ class HomeController extends Controller
         else
         {
             return view('home', [
-                'attractions' => Attraction::all()
+                'attractionsRandom' => Attraction::all()->random(3),
+                'users' => User::all()
             ]);
         }
         
