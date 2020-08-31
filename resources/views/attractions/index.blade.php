@@ -12,7 +12,7 @@
             <tr>
               <td>ID</td>
               <td>Name</td>
-              <td>Description</td>
+              <td style="width:600px">Description</td>
               <td>Google maps</td>
               <td></td>
 
@@ -23,7 +23,7 @@
           <tr>
               <td>{{$attraction->id}}</td>
               <td>{{$attraction->name}}</td>
-              <td>{{$attraction->description}}</td>
+              <td>{{Str::limit($attraction->description, 200)}}</td>
               <td><a href="{{$attraction->url_gmap}}" target="_blank">View map</a></td>
               <td>
                   <a style="display: inline-block" href="{{ route('attractions.edit',$attraction->id)}}" class="btn btn-primary">Edit</a>
