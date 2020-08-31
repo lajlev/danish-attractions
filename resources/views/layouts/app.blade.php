@@ -50,10 +50,10 @@
                         @else
                             @if(Auth::user()->id < 3)
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('attractions.create') }}">{{ __('Create Attraction') }}</a>
+                                    <a class="nav-link" href="{{ route('attractions.create') }}">{{ __('Create') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('attractions.index') }}">{{ __('Attraction overview') }}</a>
+                                    <a class="nav-link" href="{{ route('attractions.index') }}">{{ __('Overview') }}</a>
                                 </li>
                             @endif
                             <li class="nav-item dropdown">
