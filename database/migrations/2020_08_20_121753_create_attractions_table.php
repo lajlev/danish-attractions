@@ -17,10 +17,7 @@ class CreateAttractionsTable extends Migration
             $table->id(); // 1
             $table->string('name'); // Skagens Odde
             $table->longText('description'); // Skagen Odde, also Skagens Odde, sometimes known in English as the Scaw Spit or The Skaw...
-            $table->string('image')->nullable(); // some image url
             $table->string('url_gmap'); // https://www.google.com/maps/place/The+Skaw
-            $table->decimal('lat', 10, 8); // 57.666665
-            $table->decimal('lng', 11, 8); // 10.3991572
             $table->timestamps();
 
         });

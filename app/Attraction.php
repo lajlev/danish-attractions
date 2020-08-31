@@ -3,11 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Attraction extends Model
 {
-    protected $fillable = ['name', 'description', 'image', 'lat', 'lng', 'url_gmap'];
+    protected $fillable = ['name', 'description', 'url_gmap'];
     
     public function users()
     {

@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -46,6 +48,14 @@
                                 </li>
                             @endif
                         @else
+                            @if(Auth::user()->id < 3)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('attractions.create') }}">{{ __('Create Attraction') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('attractions.index') }}">{{ __('Attraction overview') }}</a>
+                                </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
