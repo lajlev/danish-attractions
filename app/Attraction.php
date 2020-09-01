@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attraction extends Model
 {
-    protected $fillable = ['name', 'description', 'url_gmap'];
+    protected $fillable = ['name', 'description', 'url_gmap', 'image'];
     
     public function users()
     {

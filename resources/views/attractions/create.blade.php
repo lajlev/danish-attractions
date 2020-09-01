@@ -27,7 +27,11 @@
           <div class="form-group">    
               <label for="url_gmap">Google maps link</label>
               <input type="text" class="form-control" name="url_gmap" placeholder="fx. https://g.page/VoergaardSlot">
-          </div>                       
+          </div>
+          <div class="form-group">    
+              <label for="image">Image</label>
+              <input type="text" class="form-control" name="image" placeholder="fx. odense-zoo.jpg">
+          </div>
            <button type="submit" class="btn btn-primary">Create</button>
        </form>
    </div>

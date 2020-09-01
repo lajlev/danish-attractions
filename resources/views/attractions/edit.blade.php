@@ -16,21 +16,25 @@
       <br /> 
       @endif
       <form method="post" action="{{ route('attractions.update', $attraction->id) }}">
-          @method('PATCH') 
-          @csrf
+            @method('PATCH') 
+            @csrf
           
-          <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" name="name" value={{ $attraction->name }} />
-          </div>
-          <div class="form-group">
-            <label for="description">Description</label>
-            <input type="text" class="form-control" name="description" value={{ $attraction->description }} />
-        </div>
-        <div class="form-group">
-          <label for="url_gmap">Google maps link</label>
-          <input type="text" class="form-control" name="url_gmap" value={{ $attraction->url_gmap }} />
-      </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" value={{ $attraction->name }}>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" name="description" value={{ $attraction->description }}>
+            </div>
+            <div class="form-group">
+                <label for="url_gmap">Google maps link</label>
+                <input type="text" class="form-control" name="url_gmap" value={{ $attraction->url_gmap }}>
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="text" class="form-control" name="image" placeholder="fx. odense-zoo.jpg" value={{ $attraction->image }}>
+            </div>
 
           
           <button type="submit" class="btn btn-primary">Update</button>
