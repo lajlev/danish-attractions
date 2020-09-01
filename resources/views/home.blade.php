@@ -36,10 +36,12 @@
                 </div>
 
                 <h1 class="mt-5 mb-5">
-                    @if ($attractionsVisited!=$attractions)
+                    @if ( $attractionsVisited->count() != 0 && $attractionsVisited->count() != $attractions->count())
                         You have visited {{$attractionsVisited->count()}} attractions 🎊
-                    @else
-                        Amazing 🇩🇰🇩🇰🇩🇰 You have visited all {{$attractions->count()}} official attractions from <span style="color:brown">Brown roadside signs</span>  🇩🇰🇩🇰🇩🇰
+                    @elseif( $attractionsVisited->count() == 0 )
+    
+                    @elseif( $attractionsVisited->count()==$attractions->count() )
+                        You have visited all {{$attractions->count()}} official attractions from <span style="color:brown">Brown roadside signs</span>  🇩🇰🇩🇰🇩🇰
                     @endif
                 </h1>
 
