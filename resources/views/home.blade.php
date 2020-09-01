@@ -23,6 +23,9 @@
                 
                         <div class="col-sm-6">
                             <div class="card mb-3">
+                                @isset($attraction->image)
+                                    <img class="card-img-top" src="/images/attractions/{{$attraction->image}}" alt="Image of {{$attraction->name}}">
+                                @endisset
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{$attraction->description}}</p>
@@ -50,6 +53,9 @@
                     
                         <div class="col-sm-6">
                             <div class="card mb-3">
+                                @isset($attraction->image)
+                                    <img class="card-img-top" src="/images/attractions/{{$attraction->image}}" alt="Image of {{$attraction->name}}">
+                                @endisset
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{$attraction->description}}</p>
@@ -113,6 +119,9 @@
                     
                         <div class="col-sm-4">
                             <div class="card mb-3">
+                                @isset($attraction->image)
+                                    <img class="card-img-top" src="/images/attractions/{{$attraction->image}}" alt="Image of {{$attraction->name}}">
+                                @endisset
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{$attraction->description}}</p>
