@@ -65,13 +65,40 @@
         </div>
     </div>
 @else
+    <div id="teaser" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="false">
+    <ol class="carousel-indicators">
+        <li data-target="#teaser" data-slide-to="0" class="active"></li>
+        <li data-target="#teaser" data-slide-to="1"></li>
+        <li data-target="#teaser" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img class="d-block w-100" src="/images/hero/valdemars-slot.jpg" alt="Valdemars slot">
+        </div>
+        <div class="carousel-item">
+        <img class="d-block w-100" src="/images/hero/odense-zoo.jpg" alt="Odense Zoo">
+        </div>
+        <div class="carousel-item">
+        <img class="d-block w-100" src="/images/hero/nyborg-slot.jpg" alt="Nyborg slot">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#teaser" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#teaser" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>{{--  END Teaser --}}
+    
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1>Explore the attractions behind the <span style="color:brown">Brown roadside signs</span></h1>
             <p class="lead">Join to see all attractions, log your visits and get directions via google maps.</p>
             <p><a class="btn btn-primary btn-lg" href="/register" role="button">Join now</a></p>
         </div>
-    </div>
+    </div> 
     
     <div class="container">
         <div class="row justify-content-center">
@@ -89,7 +116,7 @@
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{$attraction->description}}</p>
-                                    <a class="btn btn-lg btn-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
+                                    <a class="btn btn-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
                                 </div>
                             </div>
                         </div>
