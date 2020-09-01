@@ -58,7 +58,7 @@
                                 @endisset
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
-                                    <p>{{$attraction->description}}</p>
+                                    <p>{{Str::limit($attraction->description, 100)}}</p>
                                     <p><i>👣 {{ $attraction->pivot->created_at->diffForHumans() }}</i> &nbsp; <a href="{{ route('visits.delete', $attraction->id) }}" onclick="return confirm('Remove you visit at {{$attraction->name}}?')">Remove</a></p>
                                     <a class="btn btn-lg btn-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
                                 </div>
