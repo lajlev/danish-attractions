@@ -29,8 +29,8 @@
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{$attraction->description}}</p>
-                                <a class="btn btn-success" href="{{ route('visits.create', $attraction->id) }}">👣 Been there</a>
-                                <a class="btn btn-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
+                                <a class="btn btn-outline-success" href="{{ route('visits.create', $attraction->id) }}">👣 Been there</a>
+                                <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{Str::limit($attraction->description, 100)}}</p>
                                     <p><i>👣 {{ $attraction->pivot->created_at->diffForHumans() }}</i> &nbsp; <a href="{{ route('visits.delete', $attraction->id) }}" onclick="return confirm('Remove you visit at {{$attraction->name}}?')">Remove</a></p>
-                                    <a class="btn btn-lg btn-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
+                                    <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{$attraction->description}}</p>
-                                    <a class="btn btn-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
+                                    <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
                                 </div>
                             </div>
                         </div>
