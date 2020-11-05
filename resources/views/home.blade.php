@@ -100,7 +100,7 @@
     
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1>🧭 Explore the attractions behind the <span style="color:brown">Brown roadside signs</span></h1>
+            <h1>🧭 Explore the attractions behind the <span style="color:brown" title="The signs with attractions along the highway">Brown roadside signs</span></h1>
             <p class="lead">Join to see all attractions, log your visits and get directions via google maps.</p>
             <p><a class="btn btn-primary btn-lg" href="/register" role="button">Join now</a></p>
         </div>
