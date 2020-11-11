@@ -16,7 +16,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>🇩🇰 Danish Attractions</title>
+  <title>Bruneskilte.dk - @yield('title')</title>
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-          🇩🇰 Danish Attractions
+          <span style="color:brown">Bruneskilte.dk</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -54,11 +54,11 @@
             <!-- Authentication Links -->
             @guest
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+              <a class="nav-link" href="{{ route('login') }}">Log ind</a>
             </li>
             @if (Route::has('register'))
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+              <a class="nav-link" href="{{ route('register') }}">Tilmeld</a>
             </li>
             @endif
             @else

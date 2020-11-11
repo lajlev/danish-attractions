@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Oplev danske attraktioner')
+
 @section('content')
 @if (Auth::check())
     <div class="container">
@@ -14,7 +16,7 @@
 
                 @if ($attractionsNotVisited->count() != 0)
                     <h1 class="mt-5 mb-5">
-                        Still {{$attractionsNotVisited->count()}} attractions to visit.    
+                        Still {{$attractionsNotVisited->count()}} Attraktioner du ikke har besøgt.    
                     </h1>
                 @endif                    
 
@@ -40,11 +42,11 @@
 
                 <h1 class="mt-5 mb-5">
                     @if ( $attractionsVisited->count() != 0 && $attractionsVisited->count() != $attractions->count())
-                        You have visited {{$attractionsVisited->count()}} attractions 🎊
+                        Du har besøgt {{$attractionsVisited->count()}} Attraktioner 🎊
                     @elseif( $attractionsVisited->count() == 0 )
     
                     @elseif( $attractionsVisited->count()==$attractions->count() )
-                        You have visited all {{$attractions->count()}} official attractions from <span style="color:brown">Brown roadside signs</span>  🇩🇰🇩🇰🇩🇰
+                        Du har besøgt alle {{$attractions->count()}} attraktioner med <span style="color:brown">brune skilte</span> 🇩🇰 🇩🇰 🇩🇰
                     @endif
                 </h1>
 
@@ -54,13 +56,13 @@
                         <div class="col-sm-6">
                             <div class="card mb-3">
                                 @isset($attraction->image)
-                                    <img class="card-img-top" src="/images/attractions/{{$attraction->image}}" alt="Image of {{$attraction->name}}">
+                                    <img class="card-img-top" src="/images/attractions/{{$attraction->image}}" alt="Billede af {{$attraction->name}}">
                                 @endisset
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{Str::limit($attraction->description, 100)}}</p>
-                                    <p><i>👣 {{ $attraction->pivot->created_at->diffForHumans() }}</i> &nbsp; <a href="{{ route('visits.delete', $attraction->id) }}" onclick="return confirm('Remove you visit at {{$attraction->name}}?')">Remove</a></p>
-                                    <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
+                                    <p><i>👣 {{ $attraction->pivot->created_at->diffForHumans() }}</i> &nbsp; <a href="{{ route('visits.delete', $attraction->id) }}" onclick="return confirm('Slet dit besøg ved {{$attraction->name}}?')">Slet besøg</a></p>
+                                    <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Vis vej</a>
                                 </div>
                             </div>
                         </div>
@@ -90,19 +92,19 @@
     </div>
     <a class="carousel-control-prev" href="#teaser" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Forrige</span>
     </a>
     <a class="carousel-control-next" href="#teaser" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Næste</span>
     </a>
     </div>{{--  END Teaser --}}
     
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1>🧭 Explore the attractions behind the <span style="color:brown" title="The signs with attractions along the highway">Brown roadside signs</span></h1>
-            <p class="lead">Join to see all attractions, log your visits and get directions via google maps.</p>
-            <p><a class="btn btn-primary btn-lg" href="/register" role="button">Join now</a></p>
+            <h1>🧭 Besøg <span style="color:brown" title="The signs with attractions along the highway">Brune skilte</span> attraktioner</h1>
+            <p class="lead">Tilmeld dig for at se alle attraktioner, log dine besøg og find vej via google maps.</p>
+            <p><a class="btn btn-primary btn-lg" href="/register" role="button">Tilmeld dig - gratis</a></p>
         </div>
     </div> 
     
@@ -111,7 +113,7 @@
             <div class="col-md-12">
 
                 <h1 class="mt-5 mb-5">
-                    3 featured attractions
+                    3 udvalgte attraktioner
                 </h1>
     
                 <div class="row">
@@ -120,12 +122,12 @@
                         <div class="col-sm-4">
                             <div class="card mb-3">
                                 @isset($attraction->image)
-                                    <img class="card-img-top" src="/images/attractions/{{$attraction->image}}" alt="Image of {{$attraction->name}}">
+                                    <img class="card-img-top" src="/images/attractions/{{$attraction->image}}" alt="Billede af {{$attraction->name}}">
                                 @endisset
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{$attraction->description}}</p>
-                                    <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
+                                    <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Vis vej</a>
                                 </div>
                             </div>
                         </div>
