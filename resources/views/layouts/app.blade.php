@@ -18,21 +18,6 @@
 
   <title>🇩🇰 Danish Attractions</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112012820-4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-112012820-4');
-
-  </script>
-
-
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
 
