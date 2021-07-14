@@ -9,12 +9,12 @@ class VisitsController extends Controller
     public function create($attraction)
     {
         auth()->user()->attractions()->attach($attraction);
-        return Redirect::to('/')->with('status', '🎊 Visit logged');
+        return Redirect::to('/')->with('status', '✅ Besøg logget');
     }
     public function delete($attraction)
     {
         auth()->user()->attractions()->detach($attraction);
-        return Redirect::to('/')->with('status', '❌ Visit removed');
+        return Redirect::to('/')->with('status', '❌ Besøg fjernet');
     }
 }
 
