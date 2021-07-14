@@ -16,7 +16,7 @@
 
                 @if ($attractionsNotVisited->count() != 0)
                     <h1 class="mt-5 mb-5">
-                        Still {{$attractionsNotVisited->count()}} Attraktioner du ikke har besøgt.    
+                        Stadig {{$attractionsNotVisited->count()}} attraktioner du ikke har besøgt.    
                     </h1>
                 @endif                    
 
@@ -31,8 +31,8 @@
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{$attraction->description}}</p>
-                                <a class="btn btn-outline-success" href="{{ route('visits.create', $attraction->id) }}">👣 Been there</a>
-                                <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Directions</a>
+                                <a class="btn btn-outline-success" href="{{ route('visits.create', $attraction->id) }}">✅ Har været der</a>
+                                <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Se kort</a>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
 
                 <h1 class="mt-5 mb-5">
                     @if ( $attractionsVisited->count() != 0 && $attractionsVisited->count() != $attractions->count())
-                        Du har besøgt {{$attractionsVisited->count()}} Attraktioner 🎊
+                        Du har besøgt {{$attractionsVisited->count()}} attraktioner 🎊
                     @elseif( $attractionsVisited->count() == 0 )
     
                     @elseif( $attractionsVisited->count()==$attractions->count() )
@@ -61,7 +61,7 @@
                                 <div class="card-body">
                                     <h3>{{$attraction->name}}</h3>
                                     <p>{{Str::limit($attraction->description, 100)}}</p>
-                                    <p><i>👣 {{ $attraction->pivot->created_at->diffForHumans() }}</i> &nbsp; <a href="{{ route('visits.delete', $attraction->id) }}" onclick="return confirm('Slet dit besøg ved {{$attraction->name}}?')">Slet besøg</a></p>
+                                    <p><i>👣 {{ $attraction->pivot->created_at->diffForHumans() }}</i> &nbsp; <a href="{{ route('visits.delete', $attraction->id) }}" onclick="return confirm('Fjern besøg ved {{$attraction->name}}?')">Fjern besøg</a></p>
                                     <a class="btn btn-outline-secondary" target="_blank" href="{{$attraction->url_gmap}}">📍 Vis vej</a>
                                 </div>
                             </div>
