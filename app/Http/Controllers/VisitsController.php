@@ -14,7 +14,7 @@ class VisitsController extends Controller
     public function delete($attraction)
     {
         auth()->user()->attractions()->detach($attraction);
-        return Redirect::to('/')->with('status', '❌ Besøg fjernet');
+        return Redirect::to('/')->with('status', '❌  Besøg fjernet');
     }
 }
 
