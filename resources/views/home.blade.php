@@ -102,7 +102,7 @@
     
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1>🧭 Besøg <span style="color:brown" title="The signs with attractions along the highway">Brune skilte</span> attraktioner</h1>
+            <h1>🧭 Besøg <strong>Brune skilte</strong> attraktioner</h1>
             <p class="lead">Tilmeld dig for at se alle attraktioner, log dine besøg og find vej via google maps.</p>
             <p><a class="btn btn-primary btn-lg" href="/register" role="button">Tilmeld dig - gratis</a></p>
         </div>
