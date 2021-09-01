@@ -35,6 +35,14 @@
                 <label for="image">Image</label>
                 <input type="text" class="form-control" name="image" placeholder="fx. odense-zoo.jpg" value="{{ $attraction->image }}">
             </div>
+            <div class="form-group">    
+                <label for="image">Longitude</label>
+                <input type="text" class="form-control" name="longitude" placeholder="">
+            </div>
+            <div class="form-group">    
+                <label for="image">Latitude</label>
+                <input type="text" class="form-control" name="latitude" placeholder="">
+            </div>
 
           
           <button type="submit" class="btn btn-primary">Update</button>

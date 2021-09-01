@@ -15,6 +15,7 @@
               <td style="width:600px">Description</td>
               <td>Image</td>
               <td>Google maps</td>
+              <td>Coordinates</td>
               <td></td>
 
             </tr>
@@ -27,6 +28,7 @@
               <td>{{Str::limit($attraction->description, 200)}}</td>
               <td>@isset($attraction->image) <img style="width:180px" src="/images/attractions/{{$attraction->image}}" alt="{{$attraction->name}}"> @endisset</td>
               <td><a href="{{$attraction->url_gmap}}" target="_blank">View map</a></td>
+              <td>{{$attraction->longitude}}<br>{{$attraction->latitude}}</td>
               <td>
                   <a style="display: inline-block" href="{{ route('attractions.edit',$attraction->id)}}" class="btn btn-primary">Edit</a>
                   <form style="display: inline-block" action="{{ route('attractions.destroy', $attraction->id)}}" method="post">
@@ -42,5 +44,8 @@
     <div>
       <a style="margin: 20px;" href="{{ route('attractions.create')}}" class="btn btn-primary">Create attraction</a>
     </div>  
+    <div class="mt-5 mb-5 text-center">
+     Laravel version {{ App::VERSION() }}
+    </div>
 @endsection
 

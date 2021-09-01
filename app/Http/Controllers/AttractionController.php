@@ -47,7 +47,9 @@ class AttractionController extends Controller
             'name' => $request->get('name'),
             'description' => $request->get('description'),
             'url_gmap' => $request->get('url_gmap'),
-            'image' => $request->get('image')
+            'image' => $request->get('image'),
+            'longitude' => $request->get('longitude'),
+            'latitude' => $request->get('latitude')
 
         ]);
         
@@ -99,6 +101,8 @@ class AttractionController extends Controller
         $attraction->description = $request->get('description');
         $attraction->url_gmap = $request->get('url_gmap');
         $attraction->image = $request->get('image');
+        $attraction->longitude = $request->get('longitude');
+        $attraction->latitude = $request->get('latitude');
         $attraction->save();
 
         return redirect('/attractions')->with('success', 'Attraction updated ✅');
