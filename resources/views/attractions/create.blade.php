@@ -35,6 +35,7 @@
           <div class="form-group">    
             <label for="image">Latitude</label>
             <input type="text" class="form-control" name="latitude" placeholder="fx. 55.12345">
+            <div class="form-text">Convert an address to coordinates on <a href="https://www.gps-coordinates.net/">gps-coordinates.net</a></div>
         </div>  
           <div class="form-group">    
               <label for="image">Longitude</label>
