@@ -7,6 +7,6 @@
 `php artisan serve`
 
 ## Download DB from remote
-- ssh root@188.166.57.219
-- dokku mysql:export bruneskilte-db > export.sql
-- scp root@188.166.57.219:/root/export.sql ~/Desktop
+- `ssh root@188.166.57.219`
+- `dokku mysql:export bruneskilte-db > export.sql`
+- `scp root@188.166.57.219:/root/export.sql ~/Desktop`
