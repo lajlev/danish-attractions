@@ -3,7 +3,7 @@
 @section('content')
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="display-3">Attractions overview</h1>
+      <h1 class="display-3 p-3">Attractions overview</h1>
       <div>
         <a style="margin: 20px;" href="{{ route('attractions.create')}}" class="btn btn-primary">Create attraction</a>
       </div>  
