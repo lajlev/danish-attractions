@@ -22,14 +22,14 @@
            </div>
            <div class="form-group">    
               <label for="description">Description</label>
-              <input type="text" class="form-control" name="description" placeholder="fx. Awesome description from wikipedia">
+              <textarea class="form-control" name="description" rows="6" placeholder="fx. Awesome description from wikipedia"></textarea>
           </div>
           <div class="form-group">    
               <label for="url_gmap">Google maps link</label>
               <input type="text" class="form-control" name="url_gmap" placeholder="fx. https://g.page/VoergaardSlot">
           </div>
           <div class="form-group">    
-              <label for="image">Image</label>
+              <label for="image">Image <span class="badge bg-info text-wrap p-1 text-white">Michael only </span></label>
               <input type="text" class="form-control" name="image" placeholder="fx. odense-zoo.jpg">
           </div>
           <div class="form-group">    

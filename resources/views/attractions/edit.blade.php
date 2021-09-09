@@ -25,14 +25,14 @@
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <input type="text" class="form-control" name="description" value="{{ $attraction->description }}">
+                <textarea class="form-control" name="description" rows="6">{{ $attraction->description }}</textarea>
             </div>
             <div class="form-group">
                 <label for="url_gmap">Google maps link</label>
                 <input type="text" class="form-control" name="url_gmap" value="{{ $attraction->url_gmap }}">
             </div>
             <div class="form-group">
-                <label for="image">Image</label>
+                <label for="image">Image <span class="badge bg-info text-wrap p-1 text-white">Michael only </span></label>
                 <input type="text" class="form-control" name="image" placeholder="fx. odense-zoo.jpg" value="{{ $attraction->image }}">
             </div>
             <div class="form-group">    
