@@ -28,7 +28,7 @@
               <td>{{Str::limit($attraction->description, 200)}}</td>
               <td>@isset($attraction->image) <img style="width:180px" src="/images/attractions/{{$attraction->image}}" alt="{{$attraction->name}}"> @endisset</td>
               <td><a href="{{$attraction->url_gmap}}" target="_blank">View map</a></td>
-              <td>{{$attraction->longitude}}<br>{{$attraction->latitude}}</td>
+              <td>{{$attraction->latitude}}<br>{{$attraction->longitude}}</td>
               <td>
                   <a style="display: inline-block" href="{{ route('attractions.edit',$attraction->id)}}" class="btn btn-primary">Edit</a>
                   <form style="display: inline-block" action="{{ route('attractions.destroy', $attraction->id)}}" method="post">

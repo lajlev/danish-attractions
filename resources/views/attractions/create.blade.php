@@ -33,13 +33,14 @@
               <input type="text" class="form-control" name="image" placeholder="fx. odense-zoo.jpg">
           </div>
           <div class="form-group">    
+            <label for="image">Latitude</label>
+            <input type="text" class="form-control" name="latitude" placeholder="fx. FX 10.12345">
+        </div>  
+          <div class="form-group">    
               <label for="image">Longitude</label>
               <input type="text" class="form-control" name="longitude" placeholder="fx. FX 55.12345">
           </div>
-          <div class="form-group">    
-              <label for="image">Latitude</label>
-              <input type="text" class="form-control" name="latitude" placeholder="fx. FX 10.12345">
-          </div>  
+          
            <button type="submit" class="btn btn-primary">Create</button>
        </form>
    </div>

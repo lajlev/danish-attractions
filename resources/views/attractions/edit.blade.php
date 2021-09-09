@@ -36,13 +36,14 @@
                 <input type="text" class="form-control" name="image" placeholder="fx. odense-zoo.jpg" value="{{ $attraction->image }}">
             </div>
             <div class="form-group">    
-                <label for="image">Longitude</label>
-                <input type="text" class="form-control" name="longitude" placeholder="fx. FX 55.12345" value="{{ $attraction->longitude }}">
-            </div>
-            <div class="form-group">    
                 <label for="image">Latitude</label>
                 <input type="text" class="form-control" name="latitude" placeholder="fx. 10.12345" value="{{ $attraction->latitude }}">
             </div>
+            <div class="form-group">    
+                <label for="image">Longitude</label>
+                <input type="text" class="form-control" name="longitude" placeholder="fx. FX 55.12345" value="{{ $attraction->longitude }}">
+            </div>
+            
 
           
           <button type="submit" class="btn btn-primary">Update</button>
