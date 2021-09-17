@@ -10904,3 +10904,7 @@ a.text-dark:focus {
   }
 }
 
+#map-attractions {
+  height: 1040px;
+}
+

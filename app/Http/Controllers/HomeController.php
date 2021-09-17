@@ -24,6 +24,7 @@ class HomeController extends Controller
         else
         {
             return view('home', [
+                'attractions' => Attraction::all(),
                 'attractionsRandom' => Attraction::all()->random(3),
                 'users' => User::all()
             ]);

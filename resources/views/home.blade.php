@@ -2,6 +2,28 @@
 
 @section('title', 'Oplev danske attraktioner')
 
+@push('scripts-header')
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+@endpush
+
+@push('scripts-footer')
+    <script>
+        var mapAttractions = [
+        @foreach ($attractions as $attraction)
+            @isset($attraction->latitude)
+                ["{{$attraction->name}}", {{$attraction->latitude}}, {{$attraction->longitude}}],
+            @endisset
+        @endforeach
+            
+        ];
+    </script>
+    <script src="{{ asset('js/map-attractions.js') }}" defer></script>
+@endpush
+
+
+
 @section('content')
 @if (Auth::check())
     <div class="container">
@@ -100,12 +122,15 @@
     </a>
     </div>{{--  END Teaser --}}
     
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid mb-0">
         <div class="container">
             <h1>🧭 Besøg <strong>Brune skilte</strong> attraktioner</h1>
             <p class="lead">Tilmeld dig for at se alle attraktioner, log dine besøg og find vej via google maps.</p>
             <p><a class="btn btn-primary btn-lg" href="/register" role="button">Tilmeld dig - gratis</a></p>
         </div>
+    </div> 
+    <div class="jumbotron jumbotron-fluid p-0">
+        <div id="map-attractions"></div>
     </div> 
     
     <div class="container">
